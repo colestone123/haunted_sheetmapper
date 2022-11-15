@@ -92,10 +92,10 @@
     };
     //YOUR TURN: add your Mapbox token
 
-    mapboxgl.accessToken = pk.eyJ1IjoiY29sZWRkMSIsImEiOiJjbGFocDU5cmUwYjAzM29xcng0Mjl4ZGEyIn0.iKw5m_3gkrhd-tNtThqnow;
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY29sZWRkMSIsImEiOiJjbGFocDU5cmUwYjAzM29xcng0Mjl4ZGEyIn0.iKw5m_3gkrhd-tNtThqnow';
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: mapbox://styles/mapbox/dark-v10, // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+      style: 'mapbox://styles/mapbox/dark-v10', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
       center: [-122.411, 37.785], // starting position [lng, lat]
       zoom: 8,// starting zoom
       transformRequest: transformRequest
@@ -105,7 +105,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: https://docs.google.com/spreadsheets/d/1oZNhG2AT_HEFnobnzNK2pO8kiKw-oJIjF7ABFeIWMn4/gviz/tq?tqx=out:csv&sheet=cal_haunted_places,
+        url: 'https://docs.google.com/spreadsheets/d/1oZNhG2AT_HEFnobnzNK2pO8kiKw-oJIjF7ABFeIWMn4/gviz/tq?tqx=out:csv&sheet=cal_haunted_places',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
